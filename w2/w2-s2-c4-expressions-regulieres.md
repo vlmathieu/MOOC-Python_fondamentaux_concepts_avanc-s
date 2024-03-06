@@ -40,6 +40,8 @@ nbhosting:
 <span><img src="media/both-logos-small-alpha.png" /></span>
 </div>
 
+<!-- :regexp:tutorial:python:mooc -->
+
 +++
 
 # Expressions régulières et le module `re`
