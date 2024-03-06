@@ -84,7 +84,7 @@ exo_pythonid.example()
 # à vous de jouer: écrivez ici
 # sous forme de chaîne votre expression régulière
 
-regexp_pythonid = r"votre_regexp"
+regexp_pythonid = r"[a-zA-Z_]\w*"
 ```
 
 ```{code-cell} ipython3
@@ -123,7 +123,7 @@ Dans la correction - et ce sera pareil pour tous les exercices de regexp où on 
 # il faudra la faire terminer par \Z
 # regardez ce qui se passe si vous ne le faites pas
 
-regexp_agenda = r"votre regexp\Z"
+regexp_agenda = r"\A(?P<prenom>[-\w]*):(?P<nom>[-\w]+):?\Z"
 ```
 
 ```{code-cell} ipython3
@@ -152,7 +152,7 @@ exo_phone.example()
 ```{code-cell} ipython3
 # votre regexp
 # à nouveau il faut terminer la regexp par \Z
-regexp_phone = r"votre regexp\Z"
+regexp_phone = r"(0|\+33)(?P<number>[0-9]{9})\Z"
 ```
 
 ```{code-cell} ipython3
