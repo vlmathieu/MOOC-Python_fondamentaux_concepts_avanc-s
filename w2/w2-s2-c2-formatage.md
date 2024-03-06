@@ -41,6 +41,9 @@ nbhosting:
 <span><img src="media/both-logos-small-alpha.png" /></span>
 </div>
 
+<!-- :fstring:tutorial:python:mooc: -->
+
+
 +++
 
 # Formatage de chaînes de caractères
