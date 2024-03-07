@@ -49,8 +49,11 @@ exo_carre.example()
 
 ```{code-cell} ipython3
 # écrivez votre code ici
-def carre(ligne):
-    "<votre_code>"
+def carre(line):
+    line = line.replace(' ', '').replace('\t','')
+    entiers = [int(token) for token in line.split(';')
+               if token]
+    return ":".join([str(entier**2) for entier in entiers])
 ```
 
 ```{code-cell} ipython3

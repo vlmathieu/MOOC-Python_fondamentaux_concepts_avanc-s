@@ -57,10 +57,10 @@ exo_liste_P.example()
 :latex-hidden-silent: true
 
 def P(x):
-    "<votre code>"
+    return 2*x**2-3*x-2
 
 def liste_P(liste_x):
-    "votre code"
+    return [P(x) for x in liste_x]
 ```
 
 Et vous pouvez le vérifier en évaluant cette cellule :
