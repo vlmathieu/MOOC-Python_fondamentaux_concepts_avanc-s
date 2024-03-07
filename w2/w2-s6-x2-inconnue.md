@@ -69,7 +69,7 @@ chaine[3:6] == "def"
 ```{code-cell} ipython3
 :latex-skip-eval: true
 
-chaine[ <votre_code> ] == "vwx"
+chaine[-5:-2] == "vwx"
 ```
 
 2) Une slice pour obtenir "wxyz" (avec une seule constante) :
@@ -77,7 +77,7 @@ chaine[ <votre_code> ] == "vwx"
 ```{code-cell} ipython3
 :latex-skip-eval: true
 
-chaine[ <votre_code> ] == "wxyz"
+chaine[-4:] == "wxyz"
 ```
 
 3) Une slice pour obtenir "dfhjlnprtvxz" (avec deux constantes) :
@@ -85,7 +85,7 @@ chaine[ <votre_code> ] == "wxyz"
 ```{code-cell} ipython3
 :latex-skip-eval: true
 
-chaine[ <votre_code> ] == "dfhjlnprtvxz"
+chaine[3::2] == "dfhjlnprtvxz"
 ```
 
 4) Une slice pour obtenir "xurolifc" (avec deux constantes) :
@@ -93,7 +93,7 @@ chaine[ <votre_code> ] == "dfhjlnprtvxz"
 ```{code-cell} ipython3
 :latex-skip-eval: true
 
-chaine[ <votre_code> ] == "xurolifc"
+chaine[-3::-3] == "xurolifc"
 ```
 
 ## Exercice - niveau intermédiaire
@@ -141,7 +141,8 @@ len('abcd')
 ```{code-cell} ipython3
 # à vous de jouer
 def inconnue(composite, connue):
-    "votre code"
+    l_connue = len(connue)
+    return composite[l_connue:-l_connue]
 ```
 
 Une fois votre code évalué, vous pouvez évaluer la cellule suivante pour vérifier votre résultat.

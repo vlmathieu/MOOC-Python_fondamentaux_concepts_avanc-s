@@ -53,7 +53,12 @@ exo_label.example()
 ```{code-cell} ipython3
 # à vous de jouer
 def label(prenom, note):
-    "votre code"
+    if note < 10:
+        return(f'{prenom} est recalé')
+    elif note < 16:
+        return(f'{prenom} est reçu')
+    else:
+        return(f'félicitations à {prenom}')
 ```
 
 ```{code-cell} ipython3
