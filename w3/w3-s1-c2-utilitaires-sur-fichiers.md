@@ -18,6 +18,8 @@ nbhosting:
   title: Fichiers et utilitaires
 ---
 
+<!-- :ospath:pathlib:python:mooc: -->
+
 <div class="licence">
 <span>Licence CC BY-NC-ND</span>
 <span>Thierry Parmentelat &amp; Arnaud Legout</span>
