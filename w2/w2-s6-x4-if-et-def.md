@@ -52,7 +52,10 @@ exo_divisible.example()
 
 ```{code-cell} ipython3
 def divisible(a, b):
-    "<votre_code>"
+    if (a % b == 0) | (b % a == 0):
+        return True
+    else:
+        return False
 ```
 
 Vous pouvez à présent tester votre code en évaluant ceci, qui écrira un message d'erreur si un des jeux de test ne donne pas le résultat attendu.
@@ -92,7 +95,12 @@ exo_morceaux.example()
 # à vous de jouer
 
 def morceaux(x):
-    return 0 # "votre code"
+    if x <= -5:
+        return -x-5
+    elif x <= 5:
+        return 0
+    else:
+        return 1/5*x-1
 ```
 
 ```{code-cell} ipython3

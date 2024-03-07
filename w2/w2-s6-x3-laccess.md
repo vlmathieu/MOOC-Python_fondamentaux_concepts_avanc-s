@@ -46,7 +46,12 @@ exo_laccess.example()
 ```{code-cell} ipython3
 # écrivez votre code ici
 def laccess(liste):
-    return "votre code"
+    if len(liste) == 0:
+        return
+    elif len(liste) % 2 == 0:
+        return liste[-1]
+    else:
+        return liste[len(liste)//2]
 ```
 
 ```{code-cell} ipython3

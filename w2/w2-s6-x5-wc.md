@@ -67,8 +67,11 @@ exo_wc.example()
 ```{code-cell} ipython3
 # la fonction à implémenter
 def wc(string):
-    # remplacer pass par votre code
-    pass
+    L = []
+    L.append(string.count('\n')) # Nb retour à la ligne
+    L.append(len(string.split())) # Nb de mots
+    L.append(len(string)) # Nb de characters
+    return L
 ```
 
 ```{code-cell} ipython3
