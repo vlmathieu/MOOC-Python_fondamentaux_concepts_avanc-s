@@ -231,9 +231,36 @@ exo_url.example()
 ```
 
 ```{code-cell} ipython3
-# n'hésitez pas à construire votre regexp petit à petit
+# en ignorant la casse on pourra ne mentionner les noms de protocoles
+# qu'en minuscules
+i_flag = "(?i)"
 
-regexp_url = "votre_regexp"
+# pour élaborer la chaine (proto1|proto2|...)
+protos_list = ['http', 'https', 'ftp', 'ssh', ]
+protos = "(?P<proto>" + "|".join(protos_list) + ")"
+
+# à l'intérieur de la zone 'user/password', la partie
+# password est optionnelle - mais on ne veut pas le ':' dans
+# le groupe 'password' - il nous faut deux groupes
+password = r"(:(?P<password>[^:]+))?"
+
+# la partie user-password elle-même est optionnelle
+# on utilise ici un raw f-string avec le préfixe rf
+# pour insérer la regexp <password> dans la regexp <user>
+user = rf"((?P<user>\w+){password}@)?"
+
+# pour le hostname on accepte des lettres, chiffres, underscore et '.'
+# attention à backslaher . car sinon ceci va matcher tout y compris /
+hostname = r"(?P<hostname>[\w\.]+)"
+
+# le port est optionnel
+port = r"(:(?P<port>\d+))?"
+
+# après le premier slash
+path = r"(?P<path>.*)"
+
+# on assemble le tout
+url = i_flag + protos + "://" + user + hostname + port + '/' + path
 ```
 
 ```{code-cell} ipython3
